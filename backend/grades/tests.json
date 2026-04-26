@@ -1,0 +1,6 @@
+{
+  "tests": [
+    {"name":"GET stats","method":"GET","path":"/","expectedStatus":200,"expectedBody":{"total":0},"bodyMatcher":"partial"},
+    {"name":"POST vote","method":"POST","path":"/","body":{"session_id":"test123","grade":"5"},"expectedStatus":200,"expectedBody":{"success":true},"bodyMatcher":"partial"}
+  ]
+}

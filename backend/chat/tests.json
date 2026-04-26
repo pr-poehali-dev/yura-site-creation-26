@@ -1,0 +1,7 @@
+{
+  "tests": [
+    {"name":"GET messages","method":"GET","path":"/","expectedStatus":200,"expectedBody":{"messages":[]},"bodyMatcher":"partial"},
+    {"name":"POST message","method":"POST","path":"/","body":{"author_name":"Тест","message":"Привет всем!"},"expectedStatus":200,"expectedBody":{"success":true},"bodyMatcher":"partial"},
+    {"name":"POST bad word blocked","method":"POST","path":"/","body":{"author_name":"Тест","message":"блять как дела"},"expectedStatus":400,"expectedBody":{"error":"🚫 Сообщение содержит запрещённые слова. Администратор следит за чатом."},"bodyMatcher":"partial"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "tests": [
+    {"name":"GET book reviews","method":"GET","path":"/?book_key=math-5-vilenkin","expectedStatus":200,"expectedBody":{"reviews":[]},"bodyMatcher":"partial"},
+    {"name":"POST book review","method":"POST","path":"/","body":{"book_key":"math-5-vilenkin","author_name":"Маша","rating":5,"comment":"Очень понятный учебник, все решения подробные!"},"expectedStatus":200,"expectedBody":{"success":true},"bodyMatcher":"partial"}
+  ]
+}
