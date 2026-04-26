@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "GET reviews list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": { "reviews": [] },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST new review",
+      "method": "POST",
+      "path": "/",
+      "body": { "author_name": "Тестовый пользователь", "rating": 5, "comment": "Отличный сайт, очень помогает с домашними заданиями!" },
+      "expectedStatus": 200,
+      "expectedBody": { "success": true },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST review with bad words rejected",
+      "method": "POST",
+      "path": "/",
+      "body": { "author_name": "Тест", "rating": 1, "comment": "блять этот сайт ужасный" },
+      "expectedStatus": 400,
+      "expectedBody": { "error": "Отзыв содержит недопустимые слова. Пожалуйста, выразитесь культурно 🙏" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
