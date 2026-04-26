@@ -146,16 +146,20 @@ export default function Index() {
             </div>
             <div>
               <h1
-                className="text-xl font-black leading-none"
+                className="font-black leading-none tracking-tight"
                 style={{
                   fontFamily: "'Unbounded', sans-serif",
-                  background: "linear-gradient(135deg, #7c3aed, #0ea5e9, #ec4899)",
+                  fontSize: "clamp(18px, 4vw, 26px)",
+                  background: "linear-gradient(180deg, #fff 0%, #e8d5ff 40%, #7c3aed 70%, #4c1d95 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
+                  filter: "drop-shadow(0 2px 0px #4c1d95) drop-shadow(0 4px 8px rgba(124,58,237,0.5))",
+                  textShadow: "none",
+                  letterSpacing: "-0.02em",
                 }}
               >
-                ГДЗ
+                Отличник ГДЗ
               </h1>
               <p className="text-xs text-muted-foreground font-medium">Готовые домашние задания</p>
             </div>
